@@ -88,7 +88,7 @@ class GenrePopularity:
         average_listens = s.mean()
         
         print("\n" + "="*40)
-        print("📊 MUSIC POPULARITY STATISTICS")
+        print(" MUSIC POPULARITY STATISTICS")
         print("="*40)
         print(f"Total Listens: {total_listens}")
         print(f"Number of Genres: {num_genres}")
