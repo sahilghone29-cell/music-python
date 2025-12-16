@@ -11,7 +11,7 @@ class GenrePopularity:
         self.data = {}  # {genre: listens}
         self.csv_file = csv_file
         self.load_csv()
-        print(f"✅ Initialized. Loaded {len(self.data)} genres from {self.csv_file}")
+        print(f" Initialized. Loaded {len(self.data)} genres from {self.csv_file}")
 
     # --- Data Management Methods ---
     
@@ -30,7 +30,7 @@ class GenrePopularity:
             # File doesn't exist yet, start with empty data
             pass
         except Exception as e:
-            print(f"⚠️ Error loading CSV: {e}")
+            print(f" Error loading CSV: {e}")
 
     def save_csv(self):
         """Writes current genre data from self.data to the CSV file."""
@@ -42,7 +42,7 @@ class GenrePopularity:
                     writer.writerow([genre, listens])
             print(f"💾 Data saved successfully to {self.csv_file}")
         except Exception as e:
-            print(f"⚠️ Error saving CSV: {e}")
+            print(f" Error saving CSV: {e}")
 
     def add_genre(self, name, count):
         """Adds or updates the listening count for a given genre."""
@@ -57,7 +57,7 @@ class GenrePopularity:
                 print(f"🆕 Added new genre '{name}' with {count} listens.")
             self.save_csv()
         except ValueError:
-            print("❌ Error: Count must be a valid integer.")
+            print(" Error: Count must be a valid integer.")
             
     def delete_genre(self, name):
         """Deletes a genre from the data."""
@@ -67,7 +67,7 @@ class GenrePopularity:
             print(f"🗑️ Genre '{name}' deleted successfully.")
             self.save_csv()
         else:
-            print(f"❌ Error: Genre '{name}' not found.")
+            print(f" Error: Genre '{name}' not found.")
 
     # --- Analytics Methods ---
 
@@ -110,7 +110,7 @@ class GenrePopularity:
     def plot_bar_chart(self):
         """Generates and saves a bar chart of genre popularity."""
         if not self.data:
-            print("❌ Cannot generate chart: No data available.")
+            print(" Cannot generate chart: No data available.")
             return
             
         df = pd.DataFrame(list(self.data.items()), columns=['Genre', 'Listens'])
@@ -128,12 +128,12 @@ class GenrePopularity:
             
             chart_filename = 'popularity.png'
             plt.savefig(chart_filename)
-            print(f"\n🖼️ Chart generated and saved as '{chart_filename}'. ")
+            print(f"\n Chart generated and saved as '{chart_filename}'. ")
         except ImportError:
-            print("\n⚠️ Matplotlib not installed. Chart generation skipped.")
+            print("\n Matplotlib not installed. Chart generation skipped.")
             print("To generate the chart, run: pip install matplotlib. ")
         except Exception as e:
-            print(f"❌ Error generating chart: {e}")
+            print(f" Error generating chart: {e}")
 
     def display_current_data(self):
         """Helper to quickly show current loaded data."""
