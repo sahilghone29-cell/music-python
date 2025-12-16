@@ -21,14 +21,11 @@ The visualization helps in understanding:
 	•	Comparative listening trends
 	•	Basic data visualization concepts in Python
 
-⸻
 
 🛠️ Technologies Used
 	•	Python 3
 	•	Matplotlib (for data visualization)
 	•	CSV file handling
-
-⸻
 
 📂 Project Structure
 
@@ -53,7 +50,6 @@ Jazz	750
 Folk	250
 
 
-⸻
 
 ▶️ How to Run the Project
 	1.	Clone the repository:
@@ -78,18 +74,6 @@ python genre.py
 
 	5.	The bar chart will be displayed and saved as popularity.png
 
-⸻
-
 📈 Output
 
 The project generates a bar chart titled “Genre Popularity by Listening Count” showing listening trends across different music genres.
-
-⸻
-
-🎓 Use Case
-	•	College mini project
-	•	Python data visualization practice
-	•	GitHub portfolio project
-	•	Python viva / practical exam
-
-⸻
